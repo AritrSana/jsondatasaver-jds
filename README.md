@@ -1,13 +1,23 @@
 # jsondatasaver-jds
 ###### This is just a package to store data in json files. 
 
+# Installing
 
+## If using npm:
+```$ npm i jsondatasaver ```
 
-## Object's Functiions
+## If using yarn:
+```$ yarn add jsondatasaver ```
+
+## Jds Object's Functions
 * create
 ```
 create('./', 'test', { name: "Alex", age: 20 }, (err) => {
+  if(err){
     console.log(err);
+  } else {
+    console.log('Successfuly created the file')
+  }
 })
 
 ```
@@ -38,3 +48,4 @@ jds.read("./", "test", (err, data) => {
 [nodemon] starting `node test.js`
 {"name":"Alex","age":20} 
 ```
+* update 
