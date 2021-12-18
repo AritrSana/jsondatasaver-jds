@@ -18,7 +18,7 @@ $ npm i jsondatasaver
 $ yarn add jsondatasaver
 ```
 
-## Jds Object's Functions
+## Jds file's Functions
 
 - create
 
@@ -106,6 +106,36 @@ jds.del("./", "test", (err) => {
 [nodemon] restarting due to changes...
 [nodemon] starting `node test.js`
 Successfuly deleted
+```
+
+# Hash file's funcations
+
+- genHash
+
+```
+genHash('I like cake.')
+```
+
+###### The param takes the string that you want to hash. The output will be:
+``` 
+[nodemon] restarting due to changes...
+[nodemon] starting `node test.js`
+7e0fb0abdf69b94025561568197629ed776204b71307f7af922679f28b37350a
+```
+
+- compareHash
+
+```
+const hash = genHash("I like cake.")
+
+console.log(compareHash("I like cake.", hash));
+```
+
+###### The first param takes the string and second param takes the hash string and it hashes the first param and match it with the second param and returns a boolean:
+```
+[nodemon] restarting due to changes...
+[nodemon] starting `node test.js`
+true
 ```
 
 ## Have fun using the package.
