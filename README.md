@@ -108,6 +108,14 @@ jds.del("./", "test", (err) => {
 Successfuly deleted
 ```
 
+- makeArray
+
+```
+const numbers = makeArray(1,2,3,4,5,6,7,8,9,10)
+```
+
+###### It will take the array values.
+
 # Hash file's funcations
 
 - genHash
