@@ -1,12 +1,4 @@
-const jds = {
-  create,
-  read,
-  update,
-  del,
-  genHash,
-  compareHash,
-};
-
+const { createHmac } = require("crypto");
 const fs = require("fs");
 const path = require("path");
 
@@ -81,7 +73,6 @@ const del = (dir, file, callback) => {
   });
 };
 
-const { createHmac } = require("crypto");
 
 const genHash = (str) => {
   const secret = "jsondatasaver";
@@ -100,6 +91,15 @@ const compareHash = (str, hashPass = "") => {
   const hash = createHmac("sha256", secret).update(str).digest("hex");
 
   return hash === hashPass;
+};
+
+const jds = {
+  create,
+  read,
+  update,
+  del,
+  genHash,
+  compareHash,
 };
 
 module.exports = { genHash, compareHash };
