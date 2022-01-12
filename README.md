@@ -22,7 +22,7 @@ $ yarn add jsondatasaver
 
 - create
 
-```
+```javascript
 create('./', 'test', { name: "Alex", age: 20 }, (err) => {
   if(err){
     console.log(err);
@@ -31,7 +31,7 @@ create('./', 'test', { name: "Alex", age: 20 }, (err) => {
   }
 })
 
-```
+```javascript
 
 ###### The first param take the path of the dir you want to create the file. And in your dir you will see a json file named as the second param. The second param takes the name on your file. And the third param takes the data of the file. Last param takes a callback.
 
