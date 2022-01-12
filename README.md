@@ -31,7 +31,7 @@ create('./', 'test', { name: "Alex", age: 20 }, (err) => {
   }
 })
 
-```javascript
+```
 
 ###### The first param take the path of the dir you want to create the file. And in your dir you will see a json file named as the second param. The second param takes the name on your file. And the third param takes the data of the file. Last param takes a callback.
 
@@ -47,7 +47,7 @@ There was an error, file may already exists!
 
 - read
 
-```
+```javascript
 jds.read("./", "test", (err, data) => {
   if (err || !data) {
     console.log(err);
@@ -70,7 +70,7 @@ jds.read("./", "test", (err, data) => {
 
 - update
 
-```
+```javascript
 jds.update("./", "test", { name: "Jon", age: 23 }, (err) => {
   if (err) {
     console.log(err);
@@ -90,7 +90,7 @@ Successfuly updated
 
 - del
 
-```
+```javascript
 jds.del("./", "test", (err) => {
   if (err) {
     console.log(err);
@@ -110,7 +110,7 @@ Successfuly deleted
 
 - makeArray
 
-```
+```javascript
 const numbers = makeArray(1,2,3,4,5,6,7,8,9,10)
 ```
 
@@ -120,7 +120,7 @@ const numbers = makeArray(1,2,3,4,5,6,7,8,9,10)
 
 - genHash
 
-```
+```javascript
 genHash('I like cake.')
 ```
 
@@ -133,7 +133,7 @@ genHash('I like cake.')
 
 - compareHash
 
-```
+```javascript
 const hash = genHash("I like cake.")
 
 console.log(compareHash("I like cake.", hash));
